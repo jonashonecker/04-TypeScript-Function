@@ -17,3 +17,15 @@ console.log(sum)
 // Step 4: Create an array of numbers. Use the '.some' function to check if at least one number is greater than 10.
 let isGreaterThan10: boolean = myNumbers.some((value: number): boolean => value > 10);
 console.log(isGreaterThan10);
+
+// Bonus
+const list: number[] = [15, 6, 3213, 9, 0, 12, 8464, 1, 1264, 481, 186, 1031, 194];
+
+let n: number = list.sort((a: number, b: number) => b - a)
+    .map((value: number) => value * value)
+    .slice(4, -2)
+    .filter((value: number): boolean => value % 4 > 0)
+    .reduce((previousValue: number, currentValue: number) => previousValue + currentValue);
+
+
+console.log(n)
